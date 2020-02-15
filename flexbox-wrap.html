@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            display: flex;
+            justify-content: flex-start; /* flex-direction: row-reverse인 경우 flex-start 프로퍼티는 flex-end로 먹힌다. */
+            /* flex-wrap: wrap; // 브라우저 창의 크기가 작아지면 한 행에 다 보여줄 수 없을 때 콘텐트가 내려옴*/ 
+            flex-wrap: nowrap; /* 내려오지않음 */
+            height: 100vh;
+            flex-direction: row-reverse; /* 콘텐트 위치를 뒤집는다. 1 2 3 -> 3 2 1 */
+            /* flex-direction : column-reverse; */
+        }
+        
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            border: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 50px;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</body>
+</html>
