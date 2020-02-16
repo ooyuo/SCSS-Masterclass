@@ -13,3 +13,19 @@ li:not(.target) {
     background-color: slateblue;
 }
 */
+
+:root {
+    --awesomeColor: #2980b9;
+    --awesomeBorder: 1px solid red;
+}
+
+li:first-child {
+    color: var(--awesomeColor);
+    border: var(--awesomeBorder);
+}
+
+@custom-selector :--headers h1, h2, h3, h4, h5, h6;
+
+:--headers {
+  color: #8e44ad;
+}
