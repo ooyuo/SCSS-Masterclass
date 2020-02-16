@@ -1,0 +1,19 @@
+{
+  "name": "css-master-class",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ooyuo/css-master-class.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ooyuo/css-master-class/issues"
+  },
+  "homepage": "https://github.com/ooyuo/css-master-class#readme",
+  "scripts": {
+    "start": "parcel index.html"
+  }
+}
