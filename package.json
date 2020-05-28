@@ -1,30 +1,27 @@
 {
-  "name": "css-master-class",
+  "name": "scss-masterclass",
   "version": "1.0.0",
-  "description": "CSS Masterclass course (Flexbox, Grid, PostCSS, CSSNext)\r ### CSS Flex\r - [x] CSS Flex Basics\r - [x] Main Axis and Cross Axis\r - [x] Flex Direction\r - [x] Flex Wrap\r - [x] Align Self\r ### CSS Grid\r - [x] CSS Grid Basics ( Row, columns and gaps)\r - [x] Auto columns, auto rows\r - [x] Template Areas\r - [x] fr unit, repeat\r - [x] minmax, max-content, min-content\r - [x] auto-fill, auto-fit\r - [x] Justify Content, Align Content and Place Content\r - [x] Justify Items, Align Items and Place Items\r - [x] Grid Column, Column Start and End\r - [x] Line Naming\r - [x] Grid Row, Row Start and End\r - [x] Grid Area\r - [x] Justify, Align, Place Self",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ooyuo/css-master-class.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ooyuo/css-master-class/issues"
-  },
-  "homepage": "https://github.com/ooyuo/css-master-class#readme",
+  "main": "index.js",
+  "repository": "https://github.com/nomadcoders/scss-masterclass",
+  "author": "Nicolás Serrano Arévalo <itnico.las.me@gmail.com>",
+  "license": "MIT",
   "dependencies": {
-    "postcss-preset-env": "^6.7.0"
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0"
   },
-  "postcss": {
-    "plugins": {
-      "postcss-preset-env": {
-        "stage": 0
-      }
-    }
-  },
-  "devDependencies": {},
   "scripts": {
-    "start": "parcel parcel/index.html"
+    "dev": "gulp dev"
+  },
+  "browserslist": {
+    "browsers": [
+      "last 2 versions"
+    ]
   }
 }
