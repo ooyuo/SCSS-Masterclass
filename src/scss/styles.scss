@@ -1,5 +1,17 @@
 @import "_variables";
 @import "_mixins";
+@import "_buttons";
+
+a {
+    @extend %button;
+}
+
+button {
+    @extend %button;
+}
+
+/*
+#3.1 Variables and Nesting
 
 h2 {
     color: $bg;
@@ -24,6 +36,9 @@ h2 {
         background-color: powderblue;
     }
 }
+*/
+
+/* #3.2 Mixins
 
 a {
     &:nth-child(odd) {
@@ -34,3 +49,4 @@ a {
         @include link("even");
     }
 }
+*/
