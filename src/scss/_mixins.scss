@@ -1,0 +1,12 @@
+@mixin link($word) {
+    text-decoration: none;
+    display: block;
+
+    @if $word=="odd" {
+        color: blue;
+    }
+
+    @else {
+        color: red;
+    }
+}

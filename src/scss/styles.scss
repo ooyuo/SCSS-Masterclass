@@ -1,4 +1,5 @@
 @import "_variables";
+@import "_mixins";
 
 h2 {
     color: $bg;
@@ -21,5 +22,15 @@ h2 {
 
     &:hover {
         background-color: powderblue;
+    }
+}
+
+a {
+    &:nth-child(odd) {
+        @include link("odd");
+    }
+
+    &:nth-child(even) {
+        @include link("even");
     }
 }
