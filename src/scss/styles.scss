@@ -2,6 +2,23 @@
 @import "_mixins";
 @import "_buttons";
 
+h1 {
+    color: red;
+
+    @include responsive("iphone") {
+        color: yellow;
+    }
+
+    @include responsive("iphone-l") {
+        font-size: 60px;
+    }
+
+    @include responsive("tablet") {
+        color: green;
+    }
+}
+
+/* extend
 a {
     @extend %button;
 }
@@ -9,7 +26,7 @@ a {
 button {
     @extend %button;
 }
-
+*/
 /*
 #3.1 Variables and Nesting
 
