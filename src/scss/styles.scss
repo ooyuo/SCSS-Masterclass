@@ -7,103 +7,225 @@
 body {
     height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: $white;
+}
+
+.padding {
+    padding: 0 140px;
 }
 
 header {
-    background-color: white;
-    color: red;
-    padding: 70px;
-    position: fixed;
-    height: 100vh;
-    width: $fixedWidth;
+    width: 100%;
 
-    h1 {
-        font-size: 80px;
-        font-weight: 400;
-        padding: 50px 0;
-
-    }
-
-    h3 {
-        font-size: 25px;
-        margin-bottom: 40px;
-    }
-
-    p {
-        font-size: 15px;
-        width: 396px;
-        line-height: 1.2;
-    }
+    height: 155px;
 
     nav {
-        color: darken($color: #000000, $amount: 0);
-        padding-top: 30px;
-        width: 483px;
+        display: flex;
+        justify-content: space-between;
 
         ul {
             display: flex;
-            flex-wrap: wrap;
 
             li {
-                border-bottom: 2px solid rgba(0, 0, 0, 1);
-                margin-right: 10px;
-                cursor: pointer;
-                opacity: 0.7;
-
-                &:hover {
-                    opacity: 1;
-                }
+                list-style: none;
+                margin-right: 70px;
             }
         }
-
     }
 }
 
-main {
-    background-color: #e7473c;
-    margin-left: $fixedWidth;
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("https://images.unsplash.com/photo-1583248369069-9d91f1640fe6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80");
 
-    .movie {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+
+    h1 {
+        text-align: center;
+    }
+
+    a {
+        border: solid 1px white;
+        margin: 50px;
+        padding: 0 50px;
+        line-height: 55px;
+        color: white;
+        font-size: 15;
+        text-decoration: none;
+    }
+}
+
+.under-hero {
+    background-color: lightgray;
+    display: flex;
+    height: 80vh;
+    margin-top: 75px;
+    width: 100%;
+
+    .under-hero__content {
+        background-image: url(https://cdn.shopify.com/s/files/1/0086/4865/4895/files/PAINTBOX-UES_0031_0fbfcd0d-eb41-4455-9911-32370c973c2c_960x960_crop_center.jpeg?v=1574101246);
+        width: 50%;
+    }
+
+    .wrapper {
+        height: 100%;
+        width: 50%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        background: linear-gradient(to bottom,
-                rgba(0, 0, 0, 0.1) 5%,
-                transparent,
-                transparent,
-                transparent,
-                transparent) $red;
+        text-align: center;
 
-        .wrapper {
-            width: 80%;
+
+
+        a {
+            color: black;
+            border: 1px solid black;
+            width: 188px;
+            padding: 0 25px;
+            line-height: 55px;
+            text-decoration: none;
+            margin: 50px;
+        }
+    }
+
+}
+
+.blog {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 50vh);
+    justify-content: center;
+
+    .blog__post {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+        .post__content {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-
-            .movie__header {
-                color: white;
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
-                margin-bottom: 10px;
-
-                h4 {
-                    font-size: 30px;
-                    font-weight: 600;
-                }
-
-                h5 {
-                    font-size: 15px;
-                    font-weight: 600;
-                    letter-spacing: 2px;
-                }
+            .post__date {
+                font-size: 15px;
+                font-weight: 600;
             }
 
-            img {
-                width: 100%;
+            h4 {
+                font-size: 30px;
+            }
+
+            a {
+                border: solid 1px black;
+                margin: 50px;
+                padding: 0 50px;
+                line-height: 55px;
+                color: black;
+                font-size: 15;
+                text-decoration: none;
             }
         }
+    }
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .gallery__poster {
+        border-right: 1px solid black;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+}
+
+.blog-2 {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 75px;
+
+    .blog__post {
+        &:nth-child(even) {
+            img {
+
+                order: 1;
+            }
+        }
+
+        background-color: gainsboro;
+        display: flex;
+        height: 80vh;
+        margin-top: 75px;
+        width: 100%;
+
+        img {
+            width: 50%;
+        }
+
+        .post__content {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                font-size: 35px;
+                margin-bottom: 50px;
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: #f3ede8;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    padding: 65px;
+
+    .footer__column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 12px;
+        border-right: 1px solid black;
+
+        &:last-child {
+            border-right: none;
+        }
+
+        .column__title {
+            color: grey;
+            font-weight: 400;
+        }
+
+        ul {
+            padding: 0;
+
+            li {
+                list-style: none;
+
+            }
+        }
+
     }
 }

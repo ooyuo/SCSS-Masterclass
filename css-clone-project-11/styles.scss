@@ -1,0 +1,109 @@
+@import "_variables";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: $white;
+}
+
+header {
+    background-color: white;
+    color: red;
+    padding: 70px;
+    position: fixed;
+    height: 100vh;
+    width: $fixedWidth;
+
+    h1 {
+        font-size: 80px;
+        font-weight: 400;
+        padding: 50px 0;
+
+    }
+
+    h3 {
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+
+    p {
+        font-size: 15px;
+        width: 396px;
+        line-height: 1.2;
+    }
+
+    nav {
+        color: darken($color: #000000, $amount: 0);
+        padding-top: 30px;
+        width: 483px;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                border-bottom: 2px solid rgba(0, 0, 0, 1);
+                margin-right: 10px;
+                cursor: pointer;
+                opacity: 0.7;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+}
+
+main {
+    background-color: #e7473c;
+    margin-left: $fixedWidth;
+
+    .movie {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to bottom,
+                rgba(0, 0, 0, 0.1) 5%,
+                transparent,
+                transparent,
+                transparent,
+                transparent) $red;
+
+        .wrapper {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+
+
+            .movie__header {
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-bottom: 10px;
+
+                h4 {
+                    font-size: 30px;
+                    font-weight: 600;
+                }
+
+                h5 {
+                    font-size: 15px;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
