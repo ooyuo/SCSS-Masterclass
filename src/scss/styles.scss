@@ -1,82 +1,155 @@
 @import "_variables";
 
-body {}
-
 header {
-  position: fixed;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: center;
-  z-index: 1;
-  background-color: white;
-  top: 0;
+  display: flex;
   width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
 
   h1 {
-    display: flex;
-    font-size: 15px;
-    margin-left: 10px;
-
-    &:hover {
-      color: blue;
-    }
+    font-size: 45px;
+    margin: 0;
+    top: 0;
   }
 
   nav {
-
-    grid-column-start: 2;
-
     ul {
+      margin: 0;
       display: flex;
+      font-size: 25px;
 
-      li {
-        &:hover {
-          color: blue;
-        }
-
-        list-style: none;
-        margin-right: 15px;
+      :not(:last-child) {
+        margin-right: 10px;
       }
 
-      li:last-child {
-        margin-right: 0;
+      li:nth-child(3n+1) {
+        div {
+          background-color: yellow;
+        }
+      }
+
+      li:nth-child(3n+2) {
+        div {
+          background-color: greenyellow;
+        }
+      }
+
+      li:nth-child(3n+3) {
+        div {
+          background-color: aqua;
+        }
+      }
+
+      li {
+        list-style: none;
+        font-size: 20px;
+
+        div {
+          display: inline-block;
+          margin-right: 5px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+        }
+
+        a {
+          color: black;
+          text-decoration: none;
+
+          &:hover {
+            border-bottom: solid 2px black;
+          }
+        }
       }
     }
   }
 }
 
-main {
 
-  width: 75%;
+.posts {
   display: grid;
-  margin-left: 25%;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 50vh);
 
+  .post {
+    display: grid;
+    cursor: pointer;
 
-  .photo {
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0 10px;
-
-
-    img {
-      background-size: cover;
-      background-position: center;
-      width: 100%;
-      margin: 0;
+    &:nth-child(5n+1) {
+      background-color: #dd433e;
     }
 
-    h4 {
+    &:nth-child(5n+2) {
+      background-color: #e4c874;
+    }
+
+    &:nth-child(5n+3) {
+      background-color: #198ca1;
+    }
+
+    &:nth-child(5n + 4) {
+      background-color: #ec9860;
+    }
+
+    &:nth-child(5n + 5) {
+      background-color: #ccb2a2;
+    }
+
+    .post__header {
       display: flex;
-      justify-content: left;
+      justify-content: space-around;
+      font-size: 13px;
+      margin-top: 8px;
     }
 
-    &:hover {
-      h4 {
-        color: blue;
+    .post__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      &:hover {
+        .visible {
+          display: none;
+        }
+
+        .invisible {
+          display: block;
+
+        }
       }
     }
+
+    .visible {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 50%;
+        height: 100%;
+      }
+
+      h3 {
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+
+    .invisible {
+      background-color: red;
+    }
+
+
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-size: 13px;
+    margin-bottom: 8px;
   }
 }

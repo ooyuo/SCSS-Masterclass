@@ -1,0 +1,82 @@
+@import "_variables";
+
+body {}
+
+header {
+  position: fixed;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  z-index: 1;
+  background-color: white;
+  top: 0;
+  width: 100%;
+
+  h1 {
+    display: flex;
+    font-size: 15px;
+    margin-left: 10px;
+
+    &:hover {
+      color: blue;
+    }
+  }
+
+  nav {
+
+    grid-column-start: 2;
+
+    ul {
+      display: flex;
+
+      li {
+        &:hover {
+          color: blue;
+        }
+
+        list-style: none;
+        margin-right: 15px;
+      }
+
+      li:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+main {
+
+  width: 75%;
+  display: grid;
+  margin-left: 25%;
+  grid-template-columns: repeat(2, 1fr);
+
+
+  .photo {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 10px;
+
+
+    img {
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      margin: 0;
+    }
+
+    h4 {
+      display: flex;
+      justify-content: left;
+    }
+
+    &:hover {
+      h4 {
+        color: blue;
+      }
+    }
+  }
+}
