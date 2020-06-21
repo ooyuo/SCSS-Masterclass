@@ -1,0 +1,155 @@
+@import "_variables";
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+
+  h1 {
+    font-size: 45px;
+    margin: 0;
+    top: 0;
+  }
+
+  nav {
+    ul {
+      margin: 0;
+      display: flex;
+      font-size: 25px;
+
+      :not(:last-child) {
+        margin-right: 10px;
+      }
+
+      li:nth-child(3n+1) {
+        div {
+          background-color: yellow;
+        }
+      }
+
+      li:nth-child(3n+2) {
+        div {
+          background-color: greenyellow;
+        }
+      }
+
+      li:nth-child(3n+3) {
+        div {
+          background-color: aqua;
+        }
+      }
+
+      li {
+        list-style: none;
+        font-size: 20px;
+
+        div {
+          display: inline-block;
+          margin-right: 5px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+        }
+
+        a {
+          color: black;
+          text-decoration: none;
+
+          &:hover {
+            border-bottom: solid 2px black;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 50vh);
+
+  .post {
+    display: grid;
+    cursor: pointer;
+
+    &:nth-child(5n+1) {
+      background-color: #dd433e;
+    }
+
+    &:nth-child(5n+2) {
+      background-color: #e4c874;
+    }
+
+    &:nth-child(5n+3) {
+      background-color: #198ca1;
+    }
+
+    &:nth-child(5n + 4) {
+      background-color: #ec9860;
+    }
+
+    &:nth-child(5n + 5) {
+      background-color: #ccb2a2;
+    }
+
+    .post__header {
+      display: flex;
+      justify-content: space-around;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    .post__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      &:hover {
+        .visible {
+          display: none;
+        }
+
+        .invisible {
+          display: block;
+
+        }
+      }
+    }
+
+    .visible {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 50%;
+        height: 100%;
+      }
+
+      h3 {
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+
+    .invisible {
+      background-color: red;
+    }
+
+
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+}
