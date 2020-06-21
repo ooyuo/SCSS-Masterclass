@@ -6,17 +6,12 @@ body {
 
 header {
   height: 20vh;
-
-  h1 {}
 }
 
 .works {
-
   .works__header {
     display: grid;
     grid-template-columns: 1fr 2fr 3fr;
-
-
 
     span {
       color: red;
@@ -26,7 +21,6 @@ header {
   }
 
   .works__list {
-
     padding-left: 0;
 
     .works__work {
