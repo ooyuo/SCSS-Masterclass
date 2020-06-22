@@ -1,0 +1,80 @@
+@import "_variables";
+
+body {
+  margin: 20px 50px;
+}
+
+header {
+  height: 20vh;
+}
+
+.works {
+  .works__header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+
+    span {
+      color: red;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+  }
+
+  .works__list {
+    padding-left: 0;
+
+    .works__work {
+      font-size: 25px;
+      display: grid;
+      grid-template-columns: 1fr 2fr 3fr;
+      grid-template-rows: 10vh;
+      list-style: none;
+      border-bottom: 1px solid black;
+
+      &:hover {
+        font-style: italic;
+        cursor: pointer;
+      }
+
+      &:first-child {
+        border-top: 1px solid black;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.cv {
+  margin-top: 70px;
+  font-size: 30px;
+
+  span {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+}
+
+.about {
+  margin-top: 70px;
+  font-size: 30px;
+
+  span {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  a {
+    color: red;
+
+    &:hover {
+      font-style: italic;
+      cursor: pointer;
+    }
+  }
+}
